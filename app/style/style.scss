@@ -1,0 +1,28 @@
+$top-bg: #2b2b2b;
+$top-menu-color: #c2c2c2;
+$top-menu-select: #ffc90a;
+$footer-menu-color: #949494;
+$text-color: #303030;
+$slider-height: 400px;
+$tape-strip-bg: #ffc907;
+$top-clear-select: #FEDA4B;
+
+@mixin cross($property, $css) {
+    -webkit-#{$property}: $css;
+    -moz-#{$property}: $css;
+	-ms-#{$property}: $css;
+    -o-#{$property}: $css;
+    #{$property}: $css;
+}
+
+@mixin colorized($color) {
+    background: $color;
+
+    &:hover {
+        background: lighten($color, 10%);
+    }
+
+    &:active {
+        background: darken($color, 4%);
+    }
+}
